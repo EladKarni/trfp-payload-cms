@@ -5,8 +5,8 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import { buildConfig } from 'payload/config'
-
 import Users from './collections/Users'
+import FAQs from './collections/FAQs'
 
 export default buildConfig({
   admin: {
@@ -14,7 +14,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users],
+  collections: [Users, FAQs],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
