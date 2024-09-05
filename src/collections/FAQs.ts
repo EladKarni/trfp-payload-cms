@@ -10,6 +10,12 @@ const FAQs: CollectionConfig = {
     },
     fields: [
         {
+            name: 'order',
+            type: 'number',
+            label: 'Order',
+            required: true,
+        },
+        {
             name: 'question',
             type: 'text',
             label: 'Question',
